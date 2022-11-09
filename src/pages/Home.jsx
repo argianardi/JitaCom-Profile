@@ -2,6 +2,8 @@ import React from "react";
 import { CardProduct } from "../components/CardProduct";
 import Header from "../components/Header";
 import cctvImg from "../img/cctv/paket16camera.jpg";
+import laptopImg from "../img/laptop/laptop.png";
+import printerImg from "../img/printer/printer.png";
 
 export const Home = () => {
   return (
@@ -69,18 +71,30 @@ export const Home = () => {
         </ul>
       </div>
 
-      <div className="px-3 mt-8 br">
+      <div className="mt-8">
         <h2 className="mb-2 text-2xl font-bold text-center lg:text-4xl text-orangeJita font-poppins">
           Produk Kami
         </h2>
-        <p className="text-xl text-center text-biruJita">
+        <p className="my-3 text-xl text-center text-biruJita ">
           Perangkat dijamin <b>Original</b> dan <b>Bergaransi</b>
         </p>
-        <div className="bg-putihJita ">
+        <div className="flex flex-wrap justify-center gap-8 py-20 bg-putihJita ">
           <CardProduct
             img={cctvImg}
-            product={"CCTV"}
+            product={"cctv"}
             desc={"Menyediakan  paket pemasangan CCTV"}
+          />
+
+          <CardProduct
+            img={laptopImg}
+            product={"laptop"}
+            desc={"Menjual berbagai brand laptop berkualitas"}
+          />
+
+          <CardProduct
+            img={printerImg}
+            product={"printer"}
+            desc={"Menjual berbagai brand printer berkualitas"}
           />
         </div>
       </div>
