@@ -13,8 +13,8 @@ export default function Navbar() {
   //   };
 
   return (
-    <header className="sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
-      <nav className="relative flex flex-wrap items-center justify-between mb-3 ">
+    <header className="z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
+      <nav className="relative flex flex-wrap items-center justify-between mb-3">
         <div className="flex flex-wrap items-center w-full px-2 mx-auto md:px-4">
           <div className="relative flex items-center justify-between w-full ">
             {/*  logo*/}
@@ -30,9 +30,9 @@ export default function Navbar() {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <span className="w-[30px] h-[3px] my-2 block bg-black"></span>
-              <span className="w-[30px] h-[3px] my-2 block bg-black"></span>
-              <span className="w-[30px] h-[3px] my-2 block bg-black"></span>
+              <span className="w-[30px] h-[3px] my-2 block bg-orangeJita"></span>
+              <span className="w-[30px] h-[3px] my-2 block bg-orangeJita"></span>
+              <span className="w-[30px] h-[3px] my-2 block bg-orangeJita"></span>
             </button>
 
             {/* List menu for large size */}
