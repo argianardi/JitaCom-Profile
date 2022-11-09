@@ -2,11 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/logo.png";
 
-import {
-  MdOutlineShoppingCart,
-  MdOutlineHistory,
-  MdOutlineAccountCircle,
-} from "react-icons/md";
 import { IoSunny, IoMoon } from "react-icons/io5";
 // import { ThemeContext } from "../utils/DarkmodeContext";
 
@@ -18,7 +13,7 @@ export default function Navbar() {
   //   };
 
   return (
-    <header className="sticky top-0 z-50 w-full h-full px-1 sm:px-10 bb text-orangeJita">
+    <header className="sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
       <nav className="relative flex flex-wrap items-center justify-between mb-3 ">
         <div className="flex flex-wrap items-center w-full px-2 mx-auto md:px-4">
           <div className="relative flex items-center justify-between w-full ">
