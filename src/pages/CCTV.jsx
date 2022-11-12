@@ -14,7 +14,7 @@ import { CardCCTV } from "../components/CardCCTV";
 export const CCTV = () => {
   const [dataCCTV] = useState([
     {
-      title: "DAHUA IR 2 2MP",
+      title: "DAHUA IR 2 CH 2MP",
       fullTitle: "DAHUA PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
       camOutdoor: null,
@@ -31,7 +31,7 @@ export const CCTV = () => {
       img: dahuaPaket2,
     },
     {
-      title: "DAHUA IR 4 2MP",
+      title: "DAHUA IR 4 CH 2MP",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
       camOutdoor: "2 Camera Outdoor",
@@ -48,7 +48,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
-      title: "DAHUA IR 6 2MP",
+      title: "DAHUA IR 6 CH 2MP",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "4 Camera Indoor",
       camOutdoor: "2 Camera Outdoor",
@@ -65,7 +65,7 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
-      title: "DAHUA IR 8 2MP",
+      title: "DAHUA IR 8 CH 2MP",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP IR DVR 8 CH",
       camIndoor: "4 Camera Indoor",
       camOutdoor: "4 Camera Outdoor",
@@ -82,7 +82,7 @@ export const CCTV = () => {
       img: dahuaPaket8,
     },
     {
-      title: "DAHUA IR 16 2MP",
+      title: "DAHUA IR 16 CH 2MP",
       fullTitle: "DAHUA PAKETAN 16 CAMERA 2MP IR DVR 16 CH",
       camIndoor: "8 Camera Indoor",
       camOutdoor: "8 Camera Outdoor",
@@ -99,7 +99,7 @@ export const CCTV = () => {
       img: dahuaPaket16,
     },
     {
-      title: "DAHUA IR 4 2MP Color Full",
+      title: "DAHUA IR 4 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP COLOR FULL IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor Gelap Tetap Berwarna",
       camOutdoor: "2 Camera Outdoor Gelap Tetap Berwarna",
@@ -116,7 +116,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
-      title: "DAHUA IR 6 2MP Color Full",
+      title: "DAHUA IR 6 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
       camOutdoor: "2 Camera Outdoor Gelap Tetap Berwarna",
@@ -133,7 +133,7 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
-      title: "DAHUA IR 8 2MP Color Full",
+      title: "DAHUA IR 8 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
       camOutdoor: "4 Camera Outdoor Gelap Tetap Berwarna",
