@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../components/Footer";
 import Header from "../components/Header";
 import jumbotronImg from "../img/laptop/jumbotronLaptop.png";
 
@@ -18,6 +19,8 @@ export const Laptop = () => {
           Harga kompetitif dan berkualitas
         </p>
       </div>
+
+      <Footer />
     </>
   );
 };
