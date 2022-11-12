@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-// import { Jumbotron } from "../components/Jumbotron";
+import React, { useState } from "react";
+
 import cctvInhp from "../img/cctv/cctv-in-hp.png";
 import dahuaPaket2 from "../img/cctv/dahuaPaket2.jpg";
 import dahuaPaket4 from "../img/cctv/dahuaPaket4.jpg";
@@ -9,10 +9,10 @@ import dahuaPaket16 from "../img/cctv/dahuaPaket16.jpg";
 
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
-import { DataCCTV } from "../data/DataCCTV";
+import { CardCCTV } from "../components/CardCCTV";
 
 export const CCTV = () => {
-  const [dataCCTV, setDataCCTV] = useState([
+  const [dataCCTV] = useState([
     {
       title: "DAHUA IR 2 2MP",
       fullTitle: "DAHUA PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
@@ -150,11 +150,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
   ]);
-  // useEffect(() => {
-  //   setDataCCTV(DataCCTV);
-  // }, []);
-  console.log(dataCCTV);
-  console.log(dataCCTV[0].img);
+
   return (
     <div>
       <div className="bg-[url('../img/jumbotronCctv.png')] relative  bg-center  ">
@@ -178,14 +174,23 @@ export const CCTV = () => {
         </p>
       </div>
 
-      <div className="mt-8">
-        <h2 className="text-3xl font-bold text-center font-roboto text-biruJita">
+      <div className="mt-10">
+        <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita">
           Paket CCTV
         </h2>
-        <img
-          src={"/static/media/dahuaPaket2.bda0e881b1d6bea1a821.jpg"}
-          alt=""
-        />
+        <div className="w-[300px] 2sm:w-[600px] lg:w-[900px] mx-auto">
+          <div className="flex flex-wrap gap-5">
+            {dataCCTV.map((item, index) => (
+              <CardCCTV
+                key={index}
+                img={item.img}
+                title={item.title}
+                harga4ch={item.harga4CH}
+                harga8ch={item.harga8CH}
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
       <Footer />
