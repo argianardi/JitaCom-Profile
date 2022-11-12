@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineWhatsApp } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io5";
 
 export const CardCCTV = ({ img, title, harga4ch, harga8ch }) => {
+  function formatRupiah(money) {
+    return new Intl.NumberFormat(
+      "id-ID",
+      { style: "currency", currency: "IDR", minimumFractionDigits: 0 } // diletakkan dalam object
+    ).format(money);
+  }
   return (
     <div className="bg-[#d9d9d9] pt-7 pb-6 rounded-lg w-[280px] ">
       <Link to={`/`}>
@@ -18,6 +23,7 @@ export const CardCCTV = ({ img, title, harga4ch, harga8ch }) => {
             style: "currency",
             currency: "IDR",
             currencyDisplay: "symbol",
+            minimumFractionDigits: 0,
           }).format(harga4ch)}
         </p>
       )}
@@ -25,7 +31,7 @@ export const CardCCTV = ({ img, title, harga4ch, harga8ch }) => {
         {Intl.NumberFormat("id-ID", {
           style: "currency",
           currency: "IDR",
-          currencyDisplay: "symbol",
+          minimumFractionDigits: 0,
         }).format(harga8ch)}
       </p>
       <a
