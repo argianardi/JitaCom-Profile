@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../components/Footer";
 import Header from "../components/Header";
 
 export const Printer = () => {
@@ -17,6 +18,8 @@ export const Printer = () => {
           Harga kompetitif dan berkualitas
         </p>
       </div>
+
+      <Footer />
     </>
   );
 };
