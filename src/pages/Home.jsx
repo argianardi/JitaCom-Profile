@@ -1,5 +1,6 @@
 import React from "react";
 import { CardProduct } from "../components/CardProduct";
+import { Footer } from "../components/Footer";
 import Header from "../components/Header";
 import cctvImg from "../img/cctv/paket16camera.jpg";
 import laptopImg from "../img/laptop/laptop.png";
@@ -98,6 +99,8 @@ export const Home = () => {
           />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
