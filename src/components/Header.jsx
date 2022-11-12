@@ -30,9 +30,9 @@ export default function Navbar() {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <span className="w-[30px] h-[3px] my-2 block bg-orangeJita"></span>
-              <span className="w-[30px] h-[3px] my-2 block bg-orangeJita"></span>
-              <span className="w-[30px] h-[3px] my-2 block bg-orangeJita"></span>
+              <span className="w-[30px] h-[3px] mb-1 block bg-orangeJita"></span>
+              <span className="w-[30px] h-[3px] mb-1 block bg-orangeJita"></span>
+              <span className="w-[30px] h-[3px]  block bg-orangeJita"></span>
             </button>
 
             {/* List menu for large size */}
