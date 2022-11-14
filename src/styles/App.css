@@ -18,3 +18,10 @@
   background-size: cover;
   background-position: center;
 }
+
+.home {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/jumbotronHome.png);
+  background-size: cover;
+  background-position: center;
+}
