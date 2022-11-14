@@ -8,12 +8,25 @@ import { IoSunny, IoMoon } from "react-icons/io5";
 export default function Navbar() {
   //   const { theme, setTheme } = useContext(ThemeContext);
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [bgNav, setBgNav] = useState(" ");
   //   const handleChangeTheme = (mode) => {
   //     setTheme(mode);
   //   };
 
+  const changBackground = () => {
+    if (window.scrollY == 0) {
+      setBgNav(" ");
+    } else {
+      setBgNav("bg-biruJita bg-opacity-70 bgNav");
+    }
+  };
+
+  window.addEventListener("scroll", changBackground);
+
   return (
-    <header className="sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
+    <header
+      className={`sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita ${bgNav}`}
+    >
       <nav className="flex flex-wrap items-center justify-between mb-3">
         <div className="flex flex-wrap items-center w-full px-2 mx-auto md:px-4">
           <div className="flex items-center justify-between w-full ">
