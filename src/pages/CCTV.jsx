@@ -153,10 +153,9 @@ export const CCTV = () => {
 
   return (
     <div>
-      <div className="bg-[url('../img/jumbotronCctv.png')] relative  bg-center  ">
-        <div className="absolute w-full h-full opacity-75 bg-biruJita"></div>
-        <Header />
-        <div className="relative flex items-center justify-between px-1 mt-10 mb-0 text-xl lg:mt-20 2sm:px-10 md:px-20 2sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2 ">
+      <Header />
+      <div className="w-full -mt-20 cctv br">
+        <div className="flex items-center justify-between px-1 mt-16 text-lg sm:mt-24 lg:mt-28 sm:px-10 md:px-20 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2">
           <p className="font-bold text-white ">
             Dengan satu sentuhan terpantau di genggaman
           </p>
@@ -174,11 +173,11 @@ export const CCTV = () => {
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="my-10">
         <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita">
           Paket CCTV
         </h2>
-        <div className="w-[300px] 2sm:w-[600px] lg:w-[900px] mx-auto">
+        <div className="w-[300px] sm:w-[600px] lg:w-[900px] mx-auto px-1 sm:px-0">
           <div className="flex flex-wrap gap-5">
             {dataCCTV.map((item, index) => (
               <CardCCTV
