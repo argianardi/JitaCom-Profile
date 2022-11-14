@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+.cctv {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/cctv/jumbotronCctv.png);
+  background-size: cover;
+  background-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.printer {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/printer/jumbotronPrinter.png);
+  background-size: cover;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.laptop {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/laptop/jumbotronLaptop.png);
+  background-size: cover;
+  background-position: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/jumbotronHome.png);
+  background-size: cover;
+  background-position: center;
 }

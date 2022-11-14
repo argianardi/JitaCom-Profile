@@ -14,7 +14,7 @@ import { CardCCTV } from "../components/CardCCTV";
 export const CCTV = () => {
   const [dataCCTV] = useState([
     {
-      title: "DAHUA IR 2 2MP",
+      title: "DAHUA IR 2 CH 2MP",
       fullTitle: "DAHUA PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
       camOutdoor: null,
@@ -31,7 +31,7 @@ export const CCTV = () => {
       img: dahuaPaket2,
     },
     {
-      title: "DAHUA IR 4 2MP",
+      title: "DAHUA IR 4 CH 2MP",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
       camOutdoor: "2 Camera Outdoor",
@@ -48,7 +48,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
-      title: "DAHUA IR 6 2MP",
+      title: "DAHUA IR 6 CH 2MP",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "4 Camera Indoor",
       camOutdoor: "2 Camera Outdoor",
@@ -65,7 +65,7 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
-      title: "DAHUA IR 8 2MP",
+      title: "DAHUA IR 8 CH 2MP",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP IR DVR 8 CH",
       camIndoor: "4 Camera Indoor",
       camOutdoor: "4 Camera Outdoor",
@@ -82,7 +82,7 @@ export const CCTV = () => {
       img: dahuaPaket8,
     },
     {
-      title: "DAHUA IR 16 2MP",
+      title: "DAHUA IR 16 CH 2MP",
       fullTitle: "DAHUA PAKETAN 16 CAMERA 2MP IR DVR 16 CH",
       camIndoor: "8 Camera Indoor",
       camOutdoor: "8 Camera Outdoor",
@@ -99,7 +99,7 @@ export const CCTV = () => {
       img: dahuaPaket16,
     },
     {
-      title: "DAHUA IR 4 2MP Color Full",
+      title: "DAHUA IR 4 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP COLOR FULL IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor Gelap Tetap Berwarna",
       camOutdoor: "2 Camera Outdoor Gelap Tetap Berwarna",
@@ -116,7 +116,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
-      title: "DAHUA IR 6 2MP Color Full",
+      title: "DAHUA IR 6 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
       camOutdoor: "2 Camera Outdoor Gelap Tetap Berwarna",
@@ -133,7 +133,7 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
-      title: "DAHUA IR 8 2MP Color Full",
+      title: "DAHUA IR 8 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
       camOutdoor: "4 Camera Outdoor Gelap Tetap Berwarna",
@@ -153,10 +153,9 @@ export const CCTV = () => {
 
   return (
     <div>
-      <div className="bg-[url('../img/jumbotronCctv.png')] relative  bg-center  ">
-        <div className="absolute w-full h-full opacity-75 bg-biruJita"></div>
-        <Header />
-        <div className="relative flex items-center justify-between px-1 mt-10 mb-0 text-xl lg:mt-20 2sm:px-10 md:px-20 2sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2 ">
+      <Header />
+      <div className="w-full -mt-20 border border-blue-900 cctv">
+        <div className="flex items-center justify-between px-1 mt-16 text-lg sm:mt-24 lg:mt-28 sm:px-10 md:px-20 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2">
           <p className="font-bold text-white ">
             Dengan satu sentuhan terpantau di genggaman
           </p>
@@ -174,11 +173,11 @@ export const CCTV = () => {
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="my-10">
         <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita">
           Paket CCTV
         </h2>
-        <div className="w-[300px] 2sm:w-[600px] lg:w-[900px] mx-auto">
+        <div className="w-[300px] sm:w-[600px] lg:w-[900px] mx-auto px-1 sm:px-0">
           <div className="flex flex-wrap gap-5">
             {dataCCTV.map((item, index) => (
               <CardCCTV

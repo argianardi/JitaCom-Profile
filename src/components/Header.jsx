@@ -13,10 +13,10 @@ export default function Navbar() {
   //   };
 
   return (
-    <header className="z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
-      <nav className="relative flex flex-wrap items-center justify-between mb-3">
+    <header className="sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
+      <nav className="flex flex-wrap items-center justify-between mb-3">
         <div className="flex flex-wrap items-center w-full px-2 mx-auto md:px-4">
-          <div className="relative flex items-center justify-between w-full ">
+          <div className="flex items-center justify-between w-full ">
             {/*  logo*/}
             <Link to="/" className="flex items-center">
               <img src={logo} alt="logo" className="w-[50px] mt-5" />
@@ -90,7 +90,7 @@ export default function Navbar() {
           <div
             className={
               "lg:hidden flex-grow items-center" +
-              (navbarOpen ? " grid " : " hidden")
+              (navbarOpen ? " absolute top-14 right-3 z-50 " : " hidden")
             }
             id="example-navbar-danger"
           >
