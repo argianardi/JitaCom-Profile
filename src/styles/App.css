@@ -1,6 +1,20 @@
 .cctv {
   background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
-    url(../img/jumbotronCctv.png);
+    url(../img/cctv/jumbotronCctv.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.printer {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/printer/jumbotronPrinter.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.laptop {
+  background: linear-gradient(rgba(25, 52, 94, 0.7), rgba(25, 52, 94, 0.7)),
+    url(../img/laptop/jumbotronLaptop.png);
   background-size: cover;
   background-position: center;
 }
