@@ -5,7 +5,7 @@ import logo from "../img/logo.png";
 import { IoSunny, IoMoon } from "react-icons/io5";
 // import { ThemeContext } from "../utils/DarkmodeContext";
 
-export default function Navbar() {
+export default function Navbar({ cctv, printer, laptop }) {
   //   const { theme, setTheme } = useContext(ThemeContext);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [bgNav, setBgNav] = useState(" ");
@@ -52,8 +52,10 @@ export default function Navbar() {
             <ul className="flex-col items-center justify-between hidden list-none lg:flex lg:flex-row lg:ml-auto">
               {/* CCTV */}
               <li className="mx-3 nav-item hover:underline">
-                <Link to="/cart" className="flex items-center ">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/cctv" className="flex items-center ">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${cctv}`}
+                  >
                     CCTV
                   </h3>
                 </Link>
@@ -61,8 +63,10 @@ export default function Navbar() {
 
               {/* Laptop */}
               <li className="mx-3 nav-item hover:underline">
-                <Link to="/history-order" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/laptop" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${laptop}`}
+                  >
                     Laptop
                   </h3>
                 </Link>
@@ -70,8 +74,10 @@ export default function Navbar() {
 
               {/* Printer */}
               <li className="mx-3 nav-item hover:underline">
-                <Link to="/profile" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/printer" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${printer}`}
+                  >
                     Printer
                   </h3>
                 </Link>
@@ -110,8 +116,10 @@ export default function Navbar() {
             <ul className="flex justify-self-end flex-col  w-[200px] list-none bg-putihJita rounded-md p-2 lg:flex-row lg:ml-auto ">
               {/* CCTV */}
               <li className="w-[200px] nav-item hover:underline">
-                <Link to="/computer" className="flex items-center ">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita ">
+                <Link to="/cctv" className="flex items-center ">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${cctv}`}
+                  >
                     CCTV
                   </h3>
                 </Link>
@@ -119,8 +127,10 @@ export default function Navbar() {
 
               {/* Laptop */}
               <li className="nav-item w-[200px] mt-1 hover:underline">
-                <Link to="/history-order" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/laptop" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${laptop}`}
+                  >
                     Laptop
                   </h3>
                 </Link>
@@ -128,8 +138,10 @@ export default function Navbar() {
 
               {/* Printer */}
               <li className="nav-item w-[200px] mt-1 hover:underline">
-                <Link to="/profile" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita ">
+                <Link to="/printer" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${printer}`}
+                  >
                     Printer
                   </h3>
                 </Link>

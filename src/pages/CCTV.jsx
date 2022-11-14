@@ -153,7 +153,7 @@ export const CCTV = () => {
 
   return (
     <div>
-      <Header />
+      <Header cctv={"underline"} />
       <div className="w-full -mt-20 border border-blue-900 cctv">
         <div className="flex items-center justify-between px-1 mt-16 text-lg sm:mt-24 lg:mt-28 sm:px-10 md:px-20 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2">
           <p className="font-bold text-white ">
