@@ -12,7 +12,7 @@ export const Printer = () => {
         </p>
       </div>
 
-      <div className="mb-96">
+      <div className="mb-96 dark:bg-black">
         <p className="bg-[#d9d9d9] inline-block p-2 rounded-b-xl text-biruJita font-bold md:text-xl md:p-3">
           Harga kompetitif dan berkualitas
         </p>

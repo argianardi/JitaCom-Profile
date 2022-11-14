@@ -152,7 +152,7 @@ export const CCTV = () => {
   ]);
 
   return (
-    <div>
+    <div className="dark:bg-[#03002e]">
       <Header cctv={"underline"} />
       <div className="w-full -mt-20 border border-blue-900 cctv">
         <div className="flex items-center justify-between px-1 mt-16 text-lg sm:mt-24 lg:mt-28 sm:px-10 md:px-20 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2">
@@ -167,14 +167,14 @@ export const CCTV = () => {
         </div>
       </div>
 
-      <div>
+      <div className="dark:bg-[431D32]">
         <p className="bg-[#d9d9d9] inline-block p-2 rounded-b-xl text-biruJita font-bold md:text-xl md:p-3">
           Harga kompetitif dan berkualitas
         </p>
       </div>
 
-      <div className="my-10">
-        <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita">
+      <div className="my-10 ">
+        <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita dark:text-white">
           Paket CCTV
         </h2>
         <div className="w-[300px] sm:w-[600px] lg:w-[900px] mx-auto px-1 sm:px-0">

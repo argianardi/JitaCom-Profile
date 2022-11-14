@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import logo from "../img/logo.png";
 
 import { IoSunny, IoMoon } from "react-icons/io5";
-// import { ThemeContext } from "../utils/DarkmodeContext";
+import { Context } from "../context/Context";
 
 export default function Navbar({ cctv, printer, laptop }) {
-  //   const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(Context);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [bgNav, setBgNav] = useState(" ");
-  //   const handleChangeTheme = (mode) => {
-  //     setTheme(mode);
-  //   };
+  const handleChangeTheme = (mode) => {
+    setTheme(mode);
+  };
 
   const changBackground = () => {
     if (window.scrollY == 0) {
@@ -84,23 +84,24 @@ export default function Navbar({ cctv, printer, laptop }) {
               </li>
 
               {/* dark mode */}
-              <li className="mx-3 cursor-pointer nav-item hover:underline">
-                {/* {theme === "dark" ? ( */}
-                <div
-                  className="flex items-center"
-                  // onClick={() => handleChangeTheme("light")}
-                >
-                  <IoSunny className="text-orangeJita " size={35} />
-                  <p className="text-xl font-bold ">Dark</p>
-                </div>
-
-                {/* ) : ( */}
-                {/* <IoMoon
-                    className="text-white"
-                    size={35}
+              <li className="mt-1 cursor-pointer nav-item hover:underline">
+                {theme === "dark" ? (
+                  <div
+                    className="flex items-center"
+                    onClick={() => handleChangeTheme("light")}
+                  >
+                    <IoMoon className="text-orangeJita" size={35} />
+                    <p className="ml-1 text-xl font-bold">Dark</p>
+                  </div>
+                ) : (
+                  <div
+                    className="flex items-center"
                     onClick={() => handleChangeTheme("dark")}
-                  />
-                )} */}
+                  >
+                    <IoSunny className="text-orangeJita " size={35} />
+                    <p className="ml-1 text-xl font-bold">Light</p>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -113,7 +114,7 @@ export default function Navbar({ cctv, printer, laptop }) {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex justify-self-end flex-col  w-[200px] list-none bg-putihJita rounded-md p-2 lg:flex-row lg:ml-auto ">
+            <ul className="flex justify-self-end flex-col  w-[200px] list-none bg-putihJita rounded-md p-2 dark:bg-biruJita lg:flex-row lg:ml-auto ">
               {/* CCTV */}
               <li className="w-[200px] nav-item hover:underline">
                 <Link to="/cctv" className="flex items-center ">
@@ -149,22 +150,23 @@ export default function Navbar({ cctv, printer, laptop }) {
 
               {/* dark mode */}
               <li className="mt-1 cursor-pointer nav-item hover:underline">
-                {/* {theme === "dark" ? ( */}
-                <div
-                  className="flex items-center"
-                  // onClick={() => handleChangeTheme("light")}
-                >
-                  <IoSunny className="text-orangeJita " size={35} />
-                  <p className="ml-1 text-xl font-bold">Dark</p>
-                </div>
-
-                {/* ) : ( */}
-                {/* <IoMoon
-                    className="text-white"
-                    size={35}
+                {theme === "dark" ? (
+                  <div
+                    className="flex items-center"
+                    onClick={() => handleChangeTheme("light")}
+                  >
+                    <IoMoon className="text-orangeJita" size={35} />
+                    <p className="ml-1 text-xl font-bold">Dark</p>
+                  </div>
+                ) : (
+                  <div
+                    className="flex items-center"
                     onClick={() => handleChangeTheme("dark")}
-                  />
-                )} */}
+                  >
+                    <IoSunny className="text-orangeJita " size={35} />
+                    <p className="ml-1 text-xl font-bold">Light</p>
+                  </div>
+                )}
               </li>
             </ul>
           </div>

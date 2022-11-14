@@ -8,7 +8,7 @@ import printerImg from "../img/printer/printer.png";
 
 export const Home = () => {
   return (
-    <div>
+    <div className="dark:bg-[#03002e]">
       <Header />
       <div className="w-full pb-3 -mt-20 border border-blue-900 home sm:pb-10 md:pb-16 ">
         <div className="mt-24 mb-8 text-xl text-center sm:mt-32 sm:mb-14 md:mt-48 sm:text-3xl md:text-4xl xl:text-5xl">
@@ -29,13 +29,13 @@ export const Home = () => {
         <h1 className="py-3 mb-4 text-2xl font-bold text-center border-b-2 lg:text-4xl border-biruJita text-orangeJita font-poppins">
           Tentang Kami
         </h1>
-        <p className="text-base sm:text-lg font-roboto text-biruJita">
+        <p className="text-base sm:text-lg font-roboto text-biruJita dark:text-putihJita">
           PT. JITA ILHAM BERKARYA adalah workshop resmi yang bergerak di bidang
           informatika dan teknologi dengan Nomor : AHU-037610.AH.01.30.Tahun
           2022. Workshop ini berfokus di bidang IT, Perakitan Komputer, Printer,
           CCTV, Laptop, Finger Print, jaringan Internet dan Service.
         </p>
-        <p className="mt-2 text-base sm:text-lg font-roboto text-biruJita">
+        <p className="mt-2 text-base sm:text-lg font-roboto text-biruJita dark:text-putihJita">
           Company profile ini di buat sebagai dasar pertimbangan, penawaran,
           kerja sama dan informasi produk yang dapat di kerjakan oleh workshop
           kami dan sudah memiliki banyak pengalaman di bidang informatika dan
@@ -47,7 +47,7 @@ export const Home = () => {
         <h2 className="py-3 text-xl font-bold text-center text-orangeJita">
           Visi
         </h2>
-        <p className="text-base text-center text-biruJita sm:text-lg">
+        <p className="text-base text-center text-biruJita sm:text-lg dark:text-putihJita">
           Menjadi penyedia barang dan jasa produk teknologi yang berkualitas dan
           terpercaya.
         </p>
@@ -55,7 +55,7 @@ export const Home = () => {
         <h2 className="py-3 text-xl font-bold text-center text-orangeJita">
           Misi
         </h2>
-        <ul className="px-3 text-base list-disc text-biruJita sm:text-lg">
+        <ul className="px-3 text-base list-disc text-biruJita sm:text-lg dark:text-putihJita">
           <li>
             Memberikan layanan komunikasi dan solusi terkait barang IT secara
             detail dan terpercaya.
@@ -75,10 +75,10 @@ export const Home = () => {
         <h2 className="mb-2 text-2xl font-bold text-center lg:text-4xl text-orangeJita font-poppins">
           Produk Kami
         </h2>
-        <p className="my-3 text-xl text-center text-biruJita ">
+        <p className="my-3 text-xl text-center text-biruJita dark:text-putihJita">
           Perangkat dijamin <b>Original</b> dan <b>Bergaransi</b>
         </p>
-        <div className="flex flex-wrap justify-center gap-8 py-20 bg-putihJita ">
+        <div className="flex flex-wrap justify-center gap-8 py-20 bg-putihJita dark:bg-[#03002e]">
           <CardProduct
             img={cctvImg}
             product={"cctv"}
