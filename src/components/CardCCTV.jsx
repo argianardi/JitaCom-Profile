@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io5";
 
-export const CardCCTV = ({ img, title, harga4ch, harga8ch }) => {
+export const CardCCTV = ({ img, title, harga4ch, harga8ch, onClick }) => {
   return (
     <div className="bg-[#d9d9d9] pt-7 pb-6 rounded-lg w-[280px] dark:bg-[#032A49]">
-      <Link to={`/`}>
+      <div onClick={onClick} className="cursor-pointer">
         <img
           src={img}
           alt={title}
@@ -38,7 +38,7 @@ export const CardCCTV = ({ img, title, harga4ch, harga8ch }) => {
             }).format(harga8ch)}
           </span>
         </p>
-      </Link>
+      </div>
       <a
         className="flex items-center justify-center p-1 mx-auto rounded-lg mt-7 w-52 bg-biruJita hover:bg-orangeJita"
         href="https://wa.link/3507s0"
