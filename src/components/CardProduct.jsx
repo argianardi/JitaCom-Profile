@@ -11,7 +11,7 @@ export const CardProduct = ({ img, product, desc }) => {
           width="200"
           className="pt-5 mx-auto transition duration-100 hover:scale-110"
         />
-        <p className="mx-auto my-3 text-2xl font-bold text-center uppercase text-biruJita font-poppins hover:text-orangeJita dark:text-putihJita">
+        <p className="mx-auto my-3 text-2xl font-bold text-center uppercase text-biruJita font-poppins hover:text-orangeJita dark:hover:text-orangeJita dark:text-putihJita">
           {product}
         </p>
         <p className="hover:underline dark:text-putihJita">{desc}</p>
