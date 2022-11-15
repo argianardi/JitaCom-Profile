@@ -8,18 +8,18 @@ import Header from "../components/Header";
 export const DetailCCTV = () => {
   const location = useLocation();
   return (
-    <div>
+    <div className="dark:bg-[#03002e]">
       <Header />
       <div className="w-full py-10 -mt-20 border border-blue-900 cctv"></div>
 
       <div className="px-2">
-        <div className="flex flex-col flex-wrap p-1 sm:p-2 my-20 rounded-md shadow-md md:flex-row text-biruJita shadow-black/60 w-full sm:max-w-[600px] md:max-w-[768px] lg:max-w-[1000px] mx-auto">
+        <div className="flex flex-col flex-wrap p-1 xs:p-2 sm:p-3 my-20 rounded-md shadow-md md:flex-row text-biruJita shadow-black/60 w-full max-w-[400px] sm:max-w-[500px] md:max-w-[768px] lg:max-w-[1000px] mx-auto dark:bg-[#032A49] dark:text-white">
           <div className="flex flex-col flex-wrap md:flex-row">
             <div>
               <img
                 src={location.state.img}
                 alt={`gambar ${location.state.fullTitle}`}
-                className="mx-auto h-72 "
+                className="mx-auto rounded-md h-72"
               />
             </div>
             <div className="ml-0 md:ml-3">
