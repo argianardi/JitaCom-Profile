@@ -10,6 +10,7 @@ import dahuaPaket16 from "../img/cctv/dahuaPaket16.jpg";
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
 import { CardCCTV } from "../components/CardCCTV";
+import { useNavigate } from "react-router-dom";
 
 export const CCTV = () => {
   const [dataCCTV] = useState([
@@ -159,6 +160,29 @@ export const CCTV = () => {
     },
   ]);
 
+  const navigate = useNavigate();
+
+  const gotoDetailCCTV = (cctv) => {
+    navigate(`/detail-cctv/${cctv.title}`, {
+      state: {
+        fullTitle: cctv.fullTitle,
+        camIndoor: cctv.camIndoor,
+        camOutdoor: cctv.camOutdoor,
+        dvr: cctv.dvr,
+        psu: cctv.psu,
+        rg59: cctv.rg59,
+        conector: cctv.conector,
+        powerCamera: cctv.powerCamera,
+        hdd: cctv.hdd,
+        kabelDisplay: cctv.kabelDisplay,
+        jasa: cctv.jasa,
+        harga4ch: cctv.harga4CH,
+        harga8ch: cctv.harga8CH,
+        img: cctv.img,
+      },
+    });
+  };
+
   return (
     <div className="dark:bg-[#03002e]">
       <Header cctv={"underline"} />
@@ -194,6 +218,7 @@ export const CCTV = () => {
                 title={item.title}
                 harga4ch={item.harga4CH}
                 harga8ch={item.harga8CH}
+                onClick={() => gotoDetailCCTV(item)}
               />
             ))}
           </div>
