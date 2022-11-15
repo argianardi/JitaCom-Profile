@@ -3,17 +3,30 @@ import { Link } from "react-router-dom";
 import logo from "../img/logo.png";
 
 import { IoSunny, IoMoon } from "react-icons/io5";
-// import { ThemeContext } from "../utils/DarkmodeContext";
+import { Context } from "../context/Context";
 
-export default function Navbar() {
-  //   const { theme, setTheme } = useContext(ThemeContext);
+export default function Navbar({ cctv, printer, laptop }) {
+  const { theme, setTheme } = useContext(Context);
   const [navbarOpen, setNavbarOpen] = useState(false);
-  //   const handleChangeTheme = (mode) => {
-  //     setTheme(mode);
-  //   };
+  const [bgNav, setBgNav] = useState(" ");
+  const handleChangeTheme = (mode) => {
+    setTheme(mode);
+  };
+
+  const changBackground = () => {
+    if (window.scrollY == 0) {
+      setBgNav(" ");
+    } else {
+      setBgNav("bg-biruJita bg-opacity-70 bgNav");
+    }
+  };
+
+  window.addEventListener("scroll", changBackground);
 
   return (
-    <header className="sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita">
+    <header
+      className={`sticky top-0 z-50 w-full h-full px-1 sm:px-10 text-orangeJita ${bgNav}`}
+    >
       <nav className="flex flex-wrap items-center justify-between mb-3">
         <div className="flex flex-wrap items-center w-full px-2 mx-auto md:px-4">
           <div className="flex items-center justify-between w-full ">
@@ -39,8 +52,10 @@ export default function Navbar() {
             <ul className="flex-col items-center justify-between hidden list-none lg:flex lg:flex-row lg:ml-auto">
               {/* CCTV */}
               <li className="mx-3 nav-item hover:underline">
-                <Link to="/cart" className="flex items-center ">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/cctv" className="flex items-center ">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${cctv}`}
+                  >
                     CCTV
                   </h3>
                 </Link>
@@ -48,8 +63,10 @@ export default function Navbar() {
 
               {/* Laptop */}
               <li className="mx-3 nav-item hover:underline">
-                <Link to="/history-order" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/laptop" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${laptop}`}
+                  >
                     Laptop
                   </h3>
                 </Link>
@@ -57,31 +74,34 @@ export default function Navbar() {
 
               {/* Printer */}
               <li className="mx-3 nav-item hover:underline">
-                <Link to="/profile" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/printer" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${printer}`}
+                  >
                     Printer
                   </h3>
                 </Link>
               </li>
 
               {/* dark mode */}
-              <li className="mx-3 cursor-pointer nav-item hover:underline">
-                {/* {theme === "dark" ? ( */}
-                <div
-                  className="flex items-center"
-                  // onClick={() => handleChangeTheme("light")}
-                >
-                  <IoSunny className="text-orangeJita " size={35} />
-                  <p className="text-xl font-bold ">Dark</p>
-                </div>
-
-                {/* ) : ( */}
-                {/* <IoMoon
-                    className="text-white"
-                    size={35}
+              <li className="mt-1 cursor-pointer nav-item hover:underline">
+                {theme === "dark" ? (
+                  <div
+                    className="flex items-center"
+                    onClick={() => handleChangeTheme("light")}
+                  >
+                    <IoMoon className="text-orangeJita" size={35} />
+                    <p className="ml-1 text-xl font-bold">Dark</p>
+                  </div>
+                ) : (
+                  <div
+                    className="flex items-center"
                     onClick={() => handleChangeTheme("dark")}
-                  />
-                )} */}
+                  >
+                    <IoSunny className="text-orangeJita " size={35} />
+                    <p className="ml-1 text-xl font-bold">Light</p>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -94,11 +114,13 @@ export default function Navbar() {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex justify-self-end flex-col  w-[200px] list-none bg-putihJita rounded-md p-2 lg:flex-row lg:ml-auto ">
+            <ul className="flex justify-self-end flex-col  w-[200px] list-none bg-putihJita rounded-md p-2 dark:bg-biruJita lg:flex-row lg:ml-auto ">
               {/* CCTV */}
               <li className="w-[200px] nav-item hover:underline">
-                <Link to="/computer" className="flex items-center ">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita ">
+                <Link to="/cctv" className="flex items-center ">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${cctv}`}
+                  >
                     CCTV
                   </h3>
                 </Link>
@@ -106,8 +128,10 @@ export default function Navbar() {
 
               {/* Laptop */}
               <li className="nav-item w-[200px] mt-1 hover:underline">
-                <Link to="/history-order" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita">
+                <Link to="/laptop" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${laptop}`}
+                  >
                     Laptop
                   </h3>
                 </Link>
@@ -115,8 +139,10 @@ export default function Navbar() {
 
               {/* Printer */}
               <li className="nav-item w-[200px] mt-1 hover:underline">
-                <Link to="/profile" className="flex items-center">
-                  <h3 className="ml-3 text-xl font-bold font-poppins text-orangeJita ">
+                <Link to="/printer" className="flex items-center">
+                  <h3
+                    className={`ml-3 text-xl font-bold font-poppins text-orangeJita ${printer}`}
+                  >
                     Printer
                   </h3>
                 </Link>
@@ -124,22 +150,23 @@ export default function Navbar() {
 
               {/* dark mode */}
               <li className="mt-1 cursor-pointer nav-item hover:underline">
-                {/* {theme === "dark" ? ( */}
-                <div
-                  className="flex items-center"
-                  // onClick={() => handleChangeTheme("light")}
-                >
-                  <IoSunny className="text-orangeJita " size={35} />
-                  <p className="ml-1 text-xl font-bold">Dark</p>
-                </div>
-
-                {/* ) : ( */}
-                {/* <IoMoon
-                    className="text-white"
-                    size={35}
+                {theme === "dark" ? (
+                  <div
+                    className="flex items-center"
+                    onClick={() => handleChangeTheme("light")}
+                  >
+                    <IoMoon className="text-orangeJita" size={35} />
+                    <p className="ml-1 text-xl font-bold">Dark</p>
+                  </div>
+                ) : (
+                  <div
+                    className="flex items-center"
                     onClick={() => handleChangeTheme("dark")}
-                  />
-                )} */}
+                  >
+                    <IoSunny className="text-orangeJita " size={35} />
+                    <p className="ml-1 text-xl font-bold">Light</p>
+                  </div>
+                )}
               </li>
             </ul>
           </div>

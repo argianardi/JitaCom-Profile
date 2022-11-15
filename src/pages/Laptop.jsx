@@ -6,7 +6,7 @@ import jumbotronImg from "../img/laptop/jumbotronLaptop.png";
 export const Laptop = () => {
   return (
     <>
-      <Header />
+      <Header laptop={"underline"} />
       <div className="w-full -mt-20 border border-blue-900 laptop">
         <p className="relative mt-24 text-xl font-bold text-center text-white mb-14 sm:mt-32 sm:mb-24 sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-8xl font-roboto md:mt-36 md:mb-28 lg:mt-40 lg:mb-32">
           Laptop Original dan Bergaransi

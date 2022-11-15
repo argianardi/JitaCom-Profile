@@ -14,6 +14,7 @@ import { CardCCTV } from "../components/CardCCTV";
 export const CCTV = () => {
   const [dataCCTV] = useState([
     {
+      id: 1,
       title: "DAHUA IR 2 CH 2MP",
       fullTitle: "DAHUA PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
@@ -31,6 +32,7 @@ export const CCTV = () => {
       img: dahuaPaket2,
     },
     {
+      id: 2,
       title: "DAHUA IR 4 CH 2MP",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
@@ -48,6 +50,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
+      id: 3,
       title: "DAHUA IR 6 CH 2MP",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "4 Camera Indoor",
@@ -65,6 +68,7 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
+      id: 4,
       title: "DAHUA IR 8 CH 2MP",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP IR DVR 8 CH",
       camIndoor: "4 Camera Indoor",
@@ -82,6 +86,7 @@ export const CCTV = () => {
       img: dahuaPaket8,
     },
     {
+      id: 5,
       title: "DAHUA IR 16 CH 2MP",
       fullTitle: "DAHUA PAKETAN 16 CAMERA 2MP IR DVR 16 CH",
       camIndoor: "8 Camera Indoor",
@@ -99,6 +104,7 @@ export const CCTV = () => {
       img: dahuaPaket16,
     },
     {
+      id: 6,
       title: "DAHUA IR 4 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP COLOR FULL IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor Gelap Tetap Berwarna",
@@ -116,6 +122,7 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
+      id: 7,
       title: "DAHUA IR 6 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
@@ -133,6 +140,7 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
+      id: 8,
       title: "DAHUA IR 8 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
@@ -152,8 +160,8 @@ export const CCTV = () => {
   ]);
 
   return (
-    <div>
-      <Header />
+    <div className="dark:bg-[#03002e]">
+      <Header cctv={"underline"} />
       <div className="w-full -mt-20 border border-blue-900 cctv">
         <div className="flex items-center justify-between px-1 mt-16 text-lg sm:mt-24 lg:mt-28 sm:px-10 md:px-20 xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl md:-mb-2">
           <p className="font-bold text-white ">
@@ -167,14 +175,14 @@ export const CCTV = () => {
         </div>
       </div>
 
-      <div>
+      <div className="dark:bg-[431D32]">
         <p className="bg-[#d9d9d9] inline-block p-2 rounded-b-xl text-biruJita font-bold md:text-xl md:p-3">
           Harga kompetitif dan berkualitas
         </p>
       </div>
 
-      <div className="my-10">
-        <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita">
+      <div className="my-10 ">
+        <h2 className="mb-5 text-3xl font-bold text-center font-roboto text-biruJita dark:text-white">
           Paket CCTV
         </h2>
         <div className="w-[300px] sm:w-[600px] lg:w-[900px] mx-auto px-1 sm:px-0">
