@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Context } from "../context/Context";
 import { CCTV } from "../pages/CCTV";
+import { DetailCCTV } from "../pages/DetailCCTV";
 import { Home } from "../pages/Home";
 import { Laptop } from "../pages/Laptop";
 import { Printer } from "../pages/Printer";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/cctv" element={<CCTV />} />
           <Route path="/laptop" element={<Laptop />} />
           <Route path="/printer" element={<Printer />} />
+          <Route path="/detail-cctv/:productTitle" element={<DetailCCTV />} />
         </Routes>
       </BrowserRouter>
     </Context.Provider>

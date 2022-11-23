@@ -6,15 +6,20 @@ import dahuaPaket4 from "../img/cctv/dahuaPaket4.jpg";
 import dahuaPaket6 from "../img/cctv/dahuaPaket6.jpg";
 import dahuaPaket8 from "../img/cctv/dahuaPaket8.jpg";
 import dahuaPaket16 from "../img/cctv/dahuaPaket16.jpg";
+import hikvisionPaket2 from "../img/cctv/hiviksionPaket2.jpg";
+import hikvisionPaket4 from "../img/cctv/hiviksionPaket4.jpg";
+import hikvisionPaket6 from "../img/cctv/hiviksionPaket6.jpg";
+import hikvisionPaket8 from "../img/cctv/hiviksionPaket8.jpg";
+import hikvisionPaket16 from "../img/cctv/hiviksionPaket16.jpg";
 
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
 import { CardCCTV } from "../components/CardCCTV";
+import { useNavigate } from "react-router-dom";
 
 export const CCTV = () => {
   const [dataCCTV] = useState([
     {
-      id: 1,
       title: "DAHUA IR 2 CH 2MP",
       fullTitle: "DAHUA PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
@@ -32,7 +37,6 @@ export const CCTV = () => {
       img: dahuaPaket2,
     },
     {
-      id: 2,
       title: "DAHUA IR 4 CH 2MP",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor",
@@ -50,7 +54,6 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
-      id: 3,
       title: "DAHUA IR 6 CH 2MP",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP IR DVR 4/8 CH",
       camIndoor: "4 Camera Indoor",
@@ -68,7 +71,6 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
-      id: 4,
       title: "DAHUA IR 8 CH 2MP",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP IR DVR 8 CH",
       camIndoor: "4 Camera Indoor",
@@ -86,25 +88,6 @@ export const CCTV = () => {
       img: dahuaPaket8,
     },
     {
-      id: 5,
-      title: "DAHUA IR 16 CH 2MP",
-      fullTitle: "DAHUA PAKETAN 16 CAMERA 2MP IR DVR 16 CH",
-      camIndoor: "8 Camera Indoor",
-      camOutdoor: "8 Camera Outdoor",
-      dvr: "DVR 16 Chanel",
-      psu: "Power Suplay 30 A",
-      rg59: "Kabel 2 Roll",
-      conector: "BNC CCTV",
-      powerCamera: "DC CCTV",
-      hdd: "HDD 2TB",
-      kabelDisplay: "Kabel HDMI/VGA 1,5M",
-      jasa: "Jasa Instalasi & Configurasi",
-      harga4CH: 0,
-      harga8CH: 15400000,
-      img: dahuaPaket16,
-    },
-    {
-      id: 6,
       title: "DAHUA IR 4 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 4 CAMERA 2MP COLOR FULL IR DVR 4/8 CH",
       camIndoor: "2 Camera Indoor Gelap Tetap Berwarna",
@@ -122,7 +105,6 @@ export const CCTV = () => {
       img: dahuaPaket4,
     },
     {
-      id: 7,
       title: "DAHUA IR 6 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 6 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
@@ -140,7 +122,6 @@ export const CCTV = () => {
       img: dahuaPaket6,
     },
     {
-      id: 8,
       title: "DAHUA IR 8 CH 2MP Color Full",
       fullTitle: "DAHUA PAKETAN 8 CAMERA 2MP COLOR FULL IR DVR 8 CH",
       camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
@@ -157,7 +138,185 @@ export const CCTV = () => {
       harga8CH: 9800000,
       img: dahuaPaket4,
     },
+    {
+      title: "DAHUA IR 16 CH 2MP",
+      fullTitle: "DAHUA PAKETAN 16 CAMERA 2MP IR DVR 16 CH",
+      camIndoor: "8 Camera Indoor",
+      camOutdoor: "8 Camera Outdoor",
+      dvr: "DVR 16 Chanel",
+      psu: "Power Suplay 30 A",
+      rg59: "Kabel 2 Roll",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 2TB",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 0,
+      harga8CH: 15400000,
+      img: dahuaPaket16,
+    },
+
+    {
+      title: "HIKVISION IR 2 CH 2MP",
+      fullTitle: "HIKVISION PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
+      camIndoor: "2 Camera Indoor",
+      camOutdoor: null,
+      dvr: "DVR 8 Chanel",
+      psu: "Power Suplay 20 A",
+      rg59: "Kabel 100M",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 3100000,
+      harga8CH: 3700000,
+      img: hikvisionPaket2,
+    },
+    {
+      title: "HIKVISION IR 4 CH 2MP",
+      fullTitle: "HIKVISION PAKETAN 4 CAMERA 2MP IR DVR 4/8 CH",
+      camIndoor: "2 Camera Indoor",
+      camOutdoor: "2 Camera Outdoor",
+      dvr: "DVR 4 Chanel",
+      psu: "Power Suplay 10 A",
+      rg59: "Kabel 100M",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB (Perekaman 1 Bulan)",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 4500000,
+      harga8CH: 5100000,
+      img: hikvisionPaket4,
+    },
+    {
+      title: "HIKVISION IR 6 CH 2MP",
+      fullTitle: "HIKVISION PAKETAN 6 CAMERA 2MP IR DVR 4/8 CH",
+      camIndoor: "4 Camera Indoor",
+      camOutdoor: "2 Camera Outdoor",
+      dvr: "DVR 8 Chanel",
+      psu: "Power Suplay 20 A",
+      rg59: "Kabel 100M",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB (Perekaman 1 Bulan)",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 0,
+      harga8CH: 6250000,
+      img: hikvisionPaket6,
+    },
+    {
+      title: "HIKVISION IR 8 CH 2MP",
+      fullTitle: "HIKVISION PAKETAN 8 CAMERA 2MP IR DVR 8 CH",
+      camIndoor: "4 Camera Indoor",
+      camOutdoor: "4 Camera Outdoor",
+      dvr: "DVR 8 Chanel",
+      psu: "Power Suplay 20 A",
+      rg59: "Kabel 1 Roll",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB (Perekaman 1/2 Bulan)",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 0,
+      harga8CH: 7950000,
+      img: hikvisionPaket8,
+    },
+
+    {
+      title: "HIKVISION 4 CH 2MP COLOR FULL",
+      fullTitle: "HIKVISION PAKETAN 4 CAMERA 2MP COLOR FULL DVR 8 CH",
+      camIndoor: "2 Camera Indoor Gelap Tetap Berwarna",
+      camOutdoor: "2 Camera Outdoor Gelap Tetap Berwarna",
+      dvr: "DVR 8 Chanel",
+      psu: "Power Suplay 10 A",
+      rg59: "Kabel 100M",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB (Perekaman 1 Bulan)",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 5950000,
+      harga8CH: 7500000,
+      img: hikvisionPaket4,
+    },
+    {
+      title: "HIKVISION 6 CH 2MP COLOR FULL",
+      fullTitle: "HIKVISION PAKETAN 6 CAMERA 2MP COLOR FULL DVR 8 CH",
+      camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
+      camOutdoor: "2 Camera Outdoor Gelap Tetap Berwarna",
+      dvr: "DVR 8 Chanel",
+      psu: "Power Suplay 20 A",
+      rg59: "Kabel 1 Roll",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB (Perekaman 1 Bulan)",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 0,
+      harga8CH: 9500000,
+      img: hikvisionPaket6,
+    },
+    {
+      title: "HIKVISION 8 CH 2MP COLOR FULL",
+      fullTitle: "HIKVISION PAKETAN 8 CAMERA 2MP COLOR FULL DVR 8 CH",
+      camIndoor: "4 Camera Indoor Gelap Tetap Berwarna",
+      camOutdoor: "4 Camera Outdoor Gelap Tetap Berwarna",
+      dvr: "DVR 8 Chanel",
+      psu: "Power Suplay 20 A",
+      rg59: "Kabel 1 Roll",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 1TB (Perekaman 1 Bulan)",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 0,
+      harga8CH: 11950000,
+      img: hikvisionPaket8,
+    },
+    {
+      title: "HIKVISION IR 16 CH 2MP",
+      fullTitle: "HIKVISION PAKETAN 2 CAMERA 2MP IR DVR 4/8 CH",
+      camIndoor: "8 Camera Indoor",
+      camOutdoor: "8 Camera Outdoor",
+      dvr: "DVR 16 Chanel",
+      psu: "Power Suplay 30 A",
+      rg59: "2 Roll",
+      conector: "BNC CCTV",
+      powerCamera: "DC CCTV",
+      hdd: "HDD 2TB",
+      kabelDisplay: "Kabel HDMI/VGA 1,5M",
+      jasa: "Jasa Instalasi & Configurasi",
+      harga4CH: 0,
+      harga8CH: 17500000,
+      img: hikvisionPaket16,
+    },
   ]);
+
+  const navigate = useNavigate();
+
+  const gotoDetailCCTV = (cctv) => {
+    navigate(`/detail-cctv/${cctv.title}`, {
+      state: {
+        fullTitle: cctv.fullTitle,
+        camIndoor: cctv.camIndoor,
+        camOutdoor: cctv.camOutdoor,
+        dvr: cctv.dvr,
+        psu: cctv.psu,
+        rg59: cctv.rg59,
+        conector: cctv.conector,
+        powerCamera: cctv.powerCamera,
+        hdd: cctv.hdd,
+        kabelDisplay: cctv.kabelDisplay,
+        jasa: cctv.jasa,
+        harga4ch: cctv.harga4CH,
+        harga8ch: cctv.harga8CH,
+        img: cctv.img,
+      },
+    });
+  };
 
   return (
     <div className="dark:bg-[#03002e]">
@@ -194,6 +353,7 @@ export const CCTV = () => {
                 title={item.title}
                 harga4ch={item.harga4CH}
                 harga8ch={item.harga8CH}
+                onClick={() => gotoDetailCCTV(item)}
               />
             ))}
           </div>
